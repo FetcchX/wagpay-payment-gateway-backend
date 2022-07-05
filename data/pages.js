@@ -1,0 +1,73 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const client_1 = require("@prisma/client");
+exports.default = [
+    {
+        fields: [
+            { name: "email", type: "email" },
+            { name: "name", type: "text" },
+        ],
+        title: "Composibility store",
+        logo: "string",
+        description: "desc1",
+        social_links: { twitter: "https://twitter.com" },
+        accepted_currencies: [client_1.CURRENCY.solana, client_1.CURRENCY.ethereum],
+        terms_conditions: ["condition 1", "condition 2"],
+        slug: "composibility-store",
+        eth_address: "0x4e7f624C9f2dbc3bcf97D03E765142Dd46fe1C46",
+        sol_address: "BkHxK8FTeDn2HUva4nc1EBhHbEq54WwhqjQ1AY58g8GZ",
+        userId: 'cdb8b172-12c2-453f-ba72-91e755b6cc71',
+        visits: 23,
+    },
+    {
+        fields: [
+            { name: "email", type: "email" },
+            { name: "name", type: "text" },
+        ],
+        title: "network-switch-bla",
+        logo: "string",
+        description: "desc1",
+        social_links: { twitter: "https://twitter.com" },
+        accepted_currencies: [client_1.CURRENCY.solana, client_1.CURRENCY.ethereum, client_1.CURRENCY.usdcsol, client_1.CURRENCY.usdceth],
+        terms_conditions: ["condition 1", "condition 2"],
+        slug: "network-switch-bla",
+        eth_address: "0x4e7f624C9f2dbc3bcf97D03E765142Dd46fe1C46",
+        sol_address: "BkHxK8FTeDn2HUva4nc1EBhHbEq54WwhqjQ1AY58g8GZ",
+        userId: 'cdb8b172-12c2-453f-ba72-91e755b6cc71',
+        visits: 41,
+    },
+    {
+        fields: [
+            { name: "email", type: "email" },
+            { name: "name", type: "text" },
+        ],
+        title: "web3 store",
+        logo: "string",
+        description: "desc1",
+        social_links: { twitter: "https://twitter.com" },
+        accepted_currencies: [client_1.CURRENCY.solana, client_1.CURRENCY.ethereum],
+        terms_conditions: ["condition 1", "condition 2"],
+        slug: "web3-store",
+        eth_address: "0x4e7f624C9f2dbc3bcf97D03E765142Dd46fe1C46",
+        sol_address: "BkHxK8FTeDn2HUva4nc1EBhHbEq54WwhqjQ1AY58g8GZ",
+        userId: 'cdb8b172-12c2-453f-ba72-91e755b6cc71',
+        visits: 44,
+    },
+    {
+        fields: [
+            { name: "email", type: "email" },
+            { name: "name", type: "text" },
+        ],
+        title: "web3 store",
+        logo: "string",
+        description: "desc1",
+        social_links: { twitter: "https://twitter.com" },
+        accepted_currencies: [client_1.CURRENCY.solana, client_1.CURRENCY.ethereum],
+        terms_conditions: ["condition 1", "condition 2"],
+        slug: "web3-store",
+        eth_address: "0x4e7f624C9f2dbc3bcf97D03E765142Dd46fe1C46",
+        sol_address: "BkHxK8FTeDn2HUva4nc1EBhHbEq54WwhqjQ1AY58g8GZ",
+        userId: 'cdb8b172-12c2-453f-ba72-91e755b6cc71',
+        visits: 44,
+    },
+];

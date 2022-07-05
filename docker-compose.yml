@@ -1,0 +1,67 @@
+version: "3.9"
+services:
+    web:
+      build: 
+          context: .
+          dockerfile: Dockerfile
+          args:
+              SETTINGS: production
+      command: bash -c "node build/src/index.js"
+      volumes:
+          - .:/microservice:rw
+          - /static:/static
+      environment:
+        DATABASE_URL: postgresql://sk1122:satyam%23789@db:5432/jarvis?schema=public
+      image: jarvis
+      ports:
+          - 5000:5000
+      restart: "on-failure"
+      depends_on:
+        - db
+    
+    # prisma-migrate:
+    #   container_name: prisma-migrate
+    #   build: ./prisma
+    #   env_file:
+    #     - .env
+    #   environment:
+    #     - DATABASE_URL="postgresql://sk1122:satyam%23789@db:5432/jarvis"
+    #   depends_on:
+    #     - db
+
+
+    nginx:
+      build: 
+          context: ./nginx
+          dockerfile: Dockerfile
+      ports:
+          - 80:80
+      volumes:
+          - .:/home/app/microservice/static
+      depends_on:
+          - web
+      restart: "on-failure"
+
+    # certbot:
+    #   image: certbot/certbot
+    #   restart: unless-stopped
+    #   volumes:
+    #       - ./nginx/certbot/conf:/etc/letsencrypt
+    #       - ./nginx/certbot/www:/var/www/certbot
+    #   entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+    db:
+      restart: always
+      image: postgres:latest
+      environment:
+          POSTGRES_HOST: "postgres"
+          POSTGRES_USER: "sk1122"
+          POSTGRES_PASSWORD: "satyam#789"
+          POSTGRES_DB: "jarvis"
+      ports:
+          - "5432:5432"
+      volumes:
+            - database-data:/var/lib/postgresql/sdata/
+
+volumes:
+  database-data:

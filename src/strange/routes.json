@@ -1,0 +1,240 @@
+{
+	"available_bridges": ["HOP", "Hyphen", "Wormhole", "PPoSBridge"],
+	"available_swaps": ["Uniswap"],
+	"available_routes": {
+		"MATIC": {
+			"MATIC": [],
+			"ETH": [
+				{
+					"route": ["HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "0x2A5c2568b10A0E826BfA892Cf21BA7218310180b",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			],
+			"USDCETH": [
+				{
+					"route": ["Uniswap", "HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "0x2A5c2568b10A0E826BfA892Cf21BA7218310180b",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			],
+			"USDTETH": [
+				{
+					"route": ["Uniswap", "HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "0x2A5c2568b10A0E826BfA892Cf21BA7218310180b",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			]
+		},
+		"ETH": {
+			"ETH": [],
+			"MATIC": [
+				{
+					"route": ["HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 0,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			],
+			"USDCETH": [
+				{
+					"route": ["Uniswap", "HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			],
+			"USDTETH": [
+				{
+					"route": ["Uniswap", "HOP"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Hyphen"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "Wormhole"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				},
+				{
+					"route": ["Uniswap", "PPoSBridge"],
+					"gasFees": 2100,
+					"bridgeFees": 2100,
+					"swapFees": 2100,
+					"avgTime": 20000,
+					"contract": "",
+					"tokenAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				}
+			]
+		}
+	}
+}

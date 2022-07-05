@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CURRENCY {
+  solana
+  ethereum
+  matic
+  usdcsol
+  usdceth
+  usdcmatic
+}
+
+model User {
+  id          String    @id @default(uuid())
+  username    String?
+  eth_address String?
+  sol_address String?
+  is_paid     Boolean?
+  created_at  DateTime  @default(now())
+  email       String
+  apiKey      String   
+  Pages       Pages[]
+  Product     Product[]
+  intents     PaymentIntent[]
+
+  @@unique([apiKey])
+  @@unique([username])
+  @@unique([email])
+}
+
+model Product {
+  id               Int          @id @default(autoincrement())
+  discounted_price Float
+  name             String
+  description      String?
+  links            String[]
+  sold             Int          @default(0)
+  created_at       DateTime     @default(now())
+  price            Float
+  page             Pages[]
+  userId           String
+  user             User         @relation(fields: [userId], references: [id])
+  Submission       Submission[]
+  invoices         Invoice[]
+}
+
+model Pages {
+  id                  Int          @id @default(autoincrement())
+  fields              Json[]
+  created_at          DateTime     @default(now())
+  title               String
+  logo                String?
+  description         String?
+  social_links        Json?
+  accepted_currencies CURRENCY[]
+  terms_conditions    String[]
+  slug                String
+  eth_address         String?
+  sol_address         String?
+  webhook_urls        String[]
+  visits              Int
+  userId              String
+  user                User         @relation(fields: [userId], references: [id])
+  submissions         Submission[]
+  products            Product[] 
+  invoices            Invoice[]
+}
+
+model Submission {
+  id               Int      @id @default(autoincrement())
+  created_at       DateTime @default(now())
+  name             String?
+  fields           Json[]
+  contact_number   String?
+  email            String?
+  eth_address      String?
+  sol_address      String?
+  currency         CURRENCY
+  total_prices     Int       @default(0)
+  pagesId          Int?
+  transaction_hash String?
+  page             Pages?    @relation(fields: [pagesId], references: [id])
+  products         Product[]
+  invoice          Invoice?
+}
+
+model PaymentIntent {
+  id               String    @id @default(uuid())
+  value            Float
+  transaction_hash String
+  is_paid          Boolean @default(false)
+  title            String
+  description      String
+  products         Json?
+  from_data        Json?
+  orderId          String
+  webhook_urls     String[]
+  userId           String
+  user             User     @relation(fields: [userId], references: [id])
+  currency         CURRENCY[]
+  eth_address      String?
+  sol_address      String?
+  time             Int      @default(0)
+  created_at       DateTime @default(now())
+}
+
+model Invoice {
+  id                    String     @id @default(uuid())
+  value                 Float
+  discount              Float
+  Tax                   Float
+  submissionId          Int?
+  submission            Submission? @relation(fields: [submissionId], references: [id])
+  name                  String
+  address               String?
+  supported_currencies  CURRENCY[]
+  pageId                Int
+  page                  Pages      @relation(fields: [pageId], references: [id])
+  products              Product[]
+  extra_products        Json
+  due_date              DateTime
+  notes                 String?
+  email                 String?
+  created_at            DateTime   @default(now())
+}
